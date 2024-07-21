@@ -1,7 +1,7 @@
 ```bash
 
 # Find all .png files and rename them
-find . -type f -name '*.png' -printf "echo mv '%h/%f' '%h/%s_%f\n'" | sh
+find . -type f -name '*.png' -printf "mv '%h/%f' '%h/%s_%f'\n" | sh
 
 # Find all .png files and move them to the upper folder
 find . -type f -name '*.png' -printf "mv -n '%h/%f' ./\n" | sh
