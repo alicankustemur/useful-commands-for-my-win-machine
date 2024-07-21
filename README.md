@@ -1,4 +1,5 @@
 ```bash
+
 # Find all .png files and rename them
 find . -type f -name '*.png' -printf "echo mv '%h/%f' '%h/%s_%f\n'" | sh
 
@@ -10,4 +11,8 @@ Get-ChildItem  -Filter "*png" | Rename-Item -NewName {$_.Name -replace '_8047'}
 
 # List all file types on the directory
 find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u
+
+# Check How many .png files found 
+find . -type f -name '*.mov' -printf "mv -n '%h/%f' ./\n" | wc -l
+
 ```
