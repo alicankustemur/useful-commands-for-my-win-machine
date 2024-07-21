@@ -13,6 +13,6 @@ Get-ChildItem  -Filter "*png" | Rename-Item -NewName {$_.Name -replace '_8047'}
 find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u
 
 # Check How many .png files found 
-find . -type f -name '*.mov' -printf "mv -n '%h/%f' ./\n" | wc -l
+find . -type f -name '*.png' -printf "mv -n '%h/%f' ./\n" | wc -l
 
 ```
