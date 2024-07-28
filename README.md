@@ -1,6 +1,9 @@
 # Useful commands for my Windows Machine 
 ```bash
 
+# Print all .png files that found
+find . -type f -name '*.png' -printf "echo '%h/%f' \n" | sh
+
 # Find all .png files and rename them
 find . -type f -name '*.png' -printf "mv '%h/%f' '%h/%s_%f'\n" | sh
 
